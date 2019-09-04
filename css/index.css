@@ -97,10 +97,11 @@
   cursor: pointer;
 }
 .menu {
+  transform: translateX(-100%);
   position: fixed;
   transition: all 0.5s ease;
   top: 75px;
-  left: -350px;
+  left: 0;
   width: 350px;
   height: 100vh;
   /* This give the height 100% of the screen or, '100% of View Height' */
@@ -118,9 +119,8 @@
   text-align: center;
 }
 .menu--open {
-  left: 350px;
   transition: all 0.5s ease;
-  transform: translateX(-100%);
+  transform: translateX(0);
 }
 html,
 body {
