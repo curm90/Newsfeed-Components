@@ -114,11 +114,13 @@ function articleComponent({title, date, firstParagraph, secondParagraph, thirdPa
   const articleP2 = document.createElement('p');
   const articleP3 = document.createElement('p');
   const expandButton = document.createElement('span');
+  const closeButton = document.createElement('button');
 
   // Add necessary classes
   article.classList.add('article');
   dateParagraph.classList.add('date');
   expandButton.classList.add('expandButton');
+  closeButton.classList.add('close-button');
 
   // Add text content to elements from data array
   articleH2.textContent = title;
@@ -127,11 +129,16 @@ function articleComponent({title, date, firstParagraph, secondParagraph, thirdPa
   articleP2.textContent = secondParagraph;
   articleP3.textContent = thirdParagraph;
   expandButton.textContent = 'Expand';
+  closeButton.textContent = 'Close Article';
 
   // Add click event listener to expand button and toggle the article class
   // Which shows and hides the article
   expandButton.addEventListener('click', () => {
     article.classList.toggle('article');
+  })
+
+  closeButton.addEventListener('click', (e) => {
+    e.target.parentElement.style.display = 'none';
   })
 
   // Append all elements to the article element
@@ -141,6 +148,7 @@ function articleComponent({title, date, firstParagraph, secondParagraph, thirdPa
   article.appendChild(articleP2);
   article.appendChild(articleP3);
   article.appendChild(expandButton);
+  article.prepend(closeButton);
 
   // Return article
   return article;

@@ -73,6 +73,21 @@
   transform: translate(-50%);
   background-color: white;
 }
+.article .close-button {
+  position: absolute;
+  top: 30%;
+  left: 90%;
+  font-size: 1rem;
+  background: #388E3C;
+  color: white;
+  border-radius: 0.6rem;
+  padding: 0.5rem;
+  outline: none;
+}
+.article .close-button:hover {
+  background: #004D40;
+  cursor: pointer;
+}
 .article-open {
   height: 400px;
 }
