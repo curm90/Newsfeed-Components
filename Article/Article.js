@@ -111,7 +111,14 @@ function articleComponent({title, date, firstParagraph, secondParagraph, thirdPa
   expandButton.addEventListener('click', () => {
     article.classList.toggle('article');
   })
-}
+
+  article.appendChild(articleH2);
+  article.appendChild(dateParagraph);
+  article.appendChild(articleP1);
+  article.appendChild(articleP2);
+  article.appendChild(articleP3);
+  article.appendChild(expandButton);
+  }
 
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
   
