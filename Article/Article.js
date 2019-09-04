@@ -104,7 +104,9 @@ const data = [
   }
 ];
 
+// Destructure variables needed inline
 function articleComponent({title, date, firstParagraph, secondParagraph, thirdParagraph}) {
+  // Create all elements needed
   const article = document.createElement('div');
   const articleH2 = document.createElement('h2');
   const dateParagraph = document.createElement('p');
@@ -113,10 +115,12 @@ function articleComponent({title, date, firstParagraph, secondParagraph, thirdPa
   const articleP3 = document.createElement('p');
   const expandButton = document.createElement('span');
 
+  // Add necessary classes
   article.classList.add('article');
   dateParagraph.classList.add('date');
   expandButton.classList.add('expandButton');
 
+  // Add text content to elements from data array
   articleH2.textContent = title;
   dateParagraph.textContent = date;
   articleP1.textContent = firstParagraph;
@@ -124,10 +128,13 @@ function articleComponent({title, date, firstParagraph, secondParagraph, thirdPa
   articleP3.textContent = thirdParagraph;
   expandButton.textContent = 'Expand';
 
+  // Add click event listener to expand button and toggle the article class
+  // Which shows and hides the article
   expandButton.addEventListener('click', () => {
     article.classList.toggle('article');
   })
 
+  // Append all elements to the article element
   article.appendChild(articleH2);
   article.appendChild(dateParagraph);
   article.appendChild(articleP1);
@@ -135,9 +142,11 @@ function articleComponent({title, date, firstParagraph, secondParagraph, thirdPa
   article.appendChild(articleP3);
   article.appendChild(expandButton);
 
+  // Return article
   return article;
 }
 
+// Iterate over the article array and append each article to the DOM
 const articleArr = data.map(articleComponent);
 articleArr.forEach(article => {
 document.querySelector('.articles').appendChild(article);
