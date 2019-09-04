@@ -134,7 +134,7 @@ function articleComponent({title, date, firstParagraph, secondParagraph, thirdPa
   // Add click event listener to expand button and toggle the article class
   // Which shows and hides the article
   expandButton.addEventListener('click', () => {
-    article.classList.toggle('article');
+    article.classList.toggle('article-open');
   })
 
   closeButton.addEventListener('click', (e) => {
