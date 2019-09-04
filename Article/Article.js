@@ -96,6 +96,10 @@ function articleComponent({title, date, firstParagraph, secondParagraph, thirdPa
   const articleP2 = document.createElement('p');
   const articleP3 = document.createElement('p');
   const expandButton = document.createElement('span');
+
+  article.classList.add('article');
+  dateParagraph.classList.add('date');
+  expandButton.classList.add('expandButton');
 }
 
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
