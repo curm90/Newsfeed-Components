@@ -21,6 +21,17 @@ function menuComponent(menuArr) {
 
     list.appendChild(listItem);
   })
+
+  const menuButton = document.querySelector('.menu-button');
+  
+  menuButton.addEventListener('click', () => {
+    menu.classList.toggle('menu--open');
+  })
+
+  menu.appendChild(list);
+  document.querySelector('.header').appendChild(menu);
+
+  return menu;
 }
 
 menuComponent(menuItems);
