@@ -118,7 +118,14 @@ function articleComponent({title, date, firstParagraph, secondParagraph, thirdPa
   article.appendChild(articleP2);
   article.appendChild(articleP3);
   article.appendChild(expandButton);
-  }
+
+  return article;
+}
+
+const articleArr = data.map(articleComponent);
+articleArr.forEach(article => {
+document.querySelector('.articles').appendChild(article);
+})
 
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
   
