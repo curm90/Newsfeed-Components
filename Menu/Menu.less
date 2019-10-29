@@ -5,8 +5,9 @@
 }
 
 .menu {
-  display: none;
+  transform: translateX(-100%);
   position: fixed;
+  transition: all .5s ease;
   top: 75px;
   left: 0;
   width: 350px;
@@ -26,5 +27,6 @@
 }
 
 .menu--open {
-  display: block;
+  transition: all .5s ease;
+  transform: translateX(0);
 }
